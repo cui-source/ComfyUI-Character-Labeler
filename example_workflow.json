@@ -1,0 +1,73 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "example.png"
+    }
+  },
+  "2": {
+    "class_type": "CLIPVisionLoaderWrapper",
+    "inputs": {
+      "clip_name": "clip_vision_g.safetensors"
+    }
+  },
+  "3": {
+    "class_type": "CLIPVisionEncodeWrapper",
+    "inputs": {
+      "clip_vision": [2, 0],
+      "image": [1, 0]
+    }
+  },
+  "4": {
+    "class_type": "CLIPImageAnalyzer",
+    "inputs": {
+      "clip_vision_output": [3, 0],
+      "confidence_threshold": 0.7,
+      "analysis_mode": "快速分析"
+    }
+  },
+  "5": {
+    "class_type": "CoreVariableSelector",
+    "inputs": {
+      "hair_style": "长发",
+      "hair_color": "黑色",
+      "eye_color": "蓝色",
+      "skin_tone": "白皙",
+      "body_type": "苗条",
+      "age_range": "青年",
+      "gender": "女性",
+      "race": "亚洲人",
+      "species": "人类"
+    }
+  },
+  "6": {
+    "class_type": "VariableVariableSelector",
+    "inputs": {
+      "state_action_expression_level1": "微笑",
+      "state_action_pose_level1": "站立",
+      "environment_background_level1": "城市",
+      "environment_time_level1": "白天",
+      "style_material_art_style_level1": "动漫"
+    }
+  },
+  "7": {
+    "class_type": "CharacterLabelGenerator",
+    "inputs": {
+      "clip_analysis": [4, 0],
+      "core_variables": [5, 0],
+      "variable_variables": [6, 0],
+      "output_format": "标签列表",
+      "include_clip_analysis": "是",
+      "separator": ", ",
+      "language": "中文",
+      "additional_prompt": "高质量, 高细节, 大师作品"
+    }
+  },
+  "8": {
+    "class_type": "ConfigManager",
+    "inputs": {
+      "action": "查看配置",
+      "config_type": "全部"
+    }
+  }
+}

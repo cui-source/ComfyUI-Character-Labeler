@@ -1,0 +1,13 @@
+# ComfyUI Character Labeler 依赖项
+
+# 基础依赖
+numpy>=1.24.0
+pillow>=10.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# 可选：如果需要更好的图像处理
+# opencv-python>=4.8.0
+
+# 可选：如果需要高级CLIP功能
+# transformers>=4.30.0
