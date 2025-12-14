@@ -36,7 +36,7 @@
 cd ComfyUI/custom_nodes
 
 # 克隆仓库
-git clone https://github.com/yourusername/ComfyUI-Character-Labeler.git
+git clone https://github.com/cui-source/ComfyUI-Character-Labeler.git
 
 # 进入目录
 cd ComfyUI-Character-Labeler
@@ -216,5 +216,6 @@ MIT License
 欢迎提交Issue和Pull Request！
 
 ## 📧 联系
+
 
 如有问题或建议，请在GitHub仓库提交Issue。
